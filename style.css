@@ -1,0 +1,15 @@
+.jumbotron {
+text-align: center;
+}
+.past{
+    background-color: red;
+    color:white;
+}
+.present{
+    background-color: white;
+    color: black;
+}
+.future{
+    background-color: blue;
+    color: white;
+}
