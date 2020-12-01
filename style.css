@@ -1,35 +1,95 @@
 .jumbotron {
-    text-align: center;
+    text-align: left;
     background-color: transparent;
     color: black;
-    border-radius: 0;
-    border-bottom: 10px solid black;
-}
-
-.description{
-    white-space: pre-wrap;
-    text-align: center;
-}
-  
-.time-block{
-    text-align: center;
-    border-radius: 15px;
-}
-  
-
-.past{
+    border-bottom:solid black;
     
-    background-color: red;
+}
+/* 
+.bg-music{
+ 
+    margin: 0 auto;
+}
+
+.btn{
+    background-color: transparent;
     color:white;
+    font-size: 100px;
+    border: none;
+ 
+    opacity: 0.3;
+    transition: all linear .2s;
+}
+.btn:hover{
+    opacity: 1;
+}
+.fa-pause-circle-o{
+    display: none;
+} */
+
+td{
+    font-weight: bold;
+    text-align: center;
+    border-style: solid;
+    border:white;
+} 
+  
+.past{
+   color: red;
+   
 }
 
 .present{
-    background-color: white;
-    color: black;
+  opacity:50%;
  
 }
 
 .future{
-    background-color: blue;
-    color: white;
+    color: blue;
+    
+}
+
+/* #schedule_titles{
+    float:left;
+} */
+
+.fas{
+    text-align: center;
+}
+
+#rightNow{
+    width: auto;
+    text-align: center;
+}
+
+.timeBox {
+    border-bottom-color: ivory;
+    border-bottom-width: thin;
+    
+}
+#mainContainer{
+ 
+    background-color:black;
+   
+    
+}
+.table {
+    display:block;
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+
+#photoBox{
+display:block;
+/* width:300px;
+height:600px; */
+background-image: cover;
+
+}
+#photoBox img{
+  
+    max-width:100%;
+    max-height:100%;
+   
 }

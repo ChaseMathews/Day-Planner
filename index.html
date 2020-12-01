@@ -5,69 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Work Day Planner</title>
 </head>
 
 <body>
-    <header class="jumbotron">
-        <h1 class="display-3">Work Day Planner</h1>
-        <p class="lead">A simple calendar app for scheduling your day.</p>
-        <div id="currentDay" class="lead"></div>
+    <div class="container-fluid jumbotron row">
+        <header class="fluid col-md-6">
+            <h1 id="greeting"></h1>
+            <p class="lead col-md-6"></p>
+            <div id="currentDay" class="col-md-6"></div>
+        </header>
+        <header id="rightBox" class="col-md-6">
+            <div id="joke"></div>
+            <!-- <div class="bg-music" id="">
+                <iframe width="295" height="190" src="https://www.youtube.com/embed/ZCYM2ez9mNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 <audio id="myMusic" src="https://www.youtube.com/watch?v=ZCYM2ez9mNw"></audio>
+                <button class="button">
+                <i class="fa fa-play-circle-o"></i>
+                <i class="fa fa-pause-circle-o"></i>
+            </button> 
+            </div> -->
+    <!-- </div> -->
     </header>
-    <div class="container">
-        <div id="hour-9" class="row time-block">
-            <div class="col-md-1 hour"> 9 AM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-10" class="row time-block">
-            <div class="col-md-1 hour"> 10 AM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-11" class="row time-block">
-            <div class="col-md-1 hour"> 11 AM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-12" class="row time-block">
-            <div class="col-md-1 hour"> 12 PM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-13" class="row time-block">
-            <div class="col-md-1 hour"> 1 PM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-14" class="row time-block">
-            <div class="col-md-1 hour"> 2 PM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-15" class="row time-block">
-            <div class="col-md-1 hour"> 3 PM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-16" class="row time-block">
-            <div class="col-md-1 hour"> 4 PM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
-        <div id="hour-17" class="row time-block">
-            <div class="col-md-1 hour"> 5 PM </div>
-            <textarea class="col-md-10 description"></textarea>
-            <button class="btn btn-outline-dark saveBtn col-md-1">Save to Planner</button>
-        </div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="main.js"></script>
+    <div id="mainContainer" class="row container-fluid">
+        <div class="col-md-6">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col-md-2"> Activity</th>
+                        <th scope="col-md-2"> <i class="fas fa-clock"></i> </th>
+                        <th scope="col-md-2" id="rightNow" class="fluid"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row"> Yoga/Workout</th>
+                        <td>7</td>
+                        <td id="hour-7" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th class="event language" scope="row"> </th>
+                        <td>8</td>
+                        <td id="hour-8" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th class="event language" scope="row"> </th>
+                        <td>9</td>
+                        <td id="hour-9" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                    <tr>
+                        <th id="subject1" class="event subject" scope="row"> </th>
+                        <td>10</td>
+                        <td id="hour-10" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                    <tr>
+                        <th id="subject2" class="event subject" scope="row"> </th>
+                        <td>11</td>
+                        <td id="hour-11" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="event science" scope="row"> </th>
+                        <td>12</td>
+                        <td id="hour-12" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="event code" scope="row"> </th>
+                        <td>13</td>
+                        <td id="hour-13" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="event code" scope="row"></th>
+                        <td>14</td>
+                        <td id="hour-14" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Workout/Yoga</th>
+                        <td>15</td>
+                        <td id="hour-15" class="timeBox"><i class="fab fa-angellist"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="photoBox" class="col-md-6 img"></div>
+
+
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
